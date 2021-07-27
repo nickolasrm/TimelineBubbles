@@ -1,0 +1,10 @@
+.IconButtonContainerStyle
+{
+	opacity: 0.4;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+.IconButtonContainerStyle:hover
+{
+	opacity: 1;
+}
