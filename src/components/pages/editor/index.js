@@ -1,5 +1,5 @@
 import React from 'react'
-import TemplateEditor from '../templates/editor'
+import TemplateEditor from '../../templates/editor/index'
 
 /**
  * Main editor page template

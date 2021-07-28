@@ -1,0 +1,22 @@
+.TitleStyle
+{
+	color: var(--panel-foreground);
+
+	top: 5vh;
+	left: 50%;
+	transform: translate(-50%);
+	position: absolute;
+	user-select: none;
+}
+
+.TimelineStyle
+{
+	font-weight: 300;
+	font-size: 3rem;
+}
+
+.BubblesStyle
+{
+	font-weight: 300;
+	font-size: 1rem;
+}

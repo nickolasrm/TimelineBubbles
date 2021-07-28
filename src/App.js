@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Editor from './components/pages/editor'
+import Editor from './components/pages/editor/index'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
