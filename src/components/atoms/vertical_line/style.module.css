@@ -1,0 +1,20 @@
+.VerticalLineStyle
+{
+	width: 1vmin;
+	height: 25vmin;
+
+	position: absolute;
+	z-index: 0;
+
+	background: var(--bubble-background);
+}
+
+.EvenLineStyle
+{
+	transform: translate(0, 50%);
+}
+
+.OddLineStyle
+{
+	transform: translate(0, -50%);
+}

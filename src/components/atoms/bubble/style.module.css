@@ -8,6 +8,7 @@
 	background-color: var(--bubble-background);
 
 	transition: 0.2s all;
+	z-index: 1;
 }
 
 .ContainerStyle:hover

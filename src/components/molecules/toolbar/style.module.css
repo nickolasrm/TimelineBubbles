@@ -6,13 +6,12 @@
 	opacity: 0.7;
 	transition: 0.2s all;
 
-	left: 50%;
+	right: 3vw;
 	bottom: 5vh;
-	transform: translate(-50%);
 	position: absolute;
 }
 .ToolbarStyle:hover
 {
 	opacity: 1;
-	transform: scale(1.1) translate(-45%); /*<- 0.45 = 1 - (0.5 * 1.1) */
+	transform: scale(1.1);
 }

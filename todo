@@ -1,0 +1,31 @@
+TODO:
+	Comment:
+		✔ Add vertical line @done(21-07-31 22:38)
+		✔ Mix it with bubble @done(21-07-31 22:38)
+		✔ Fix font size @done(21-07-31 22:38)
+		✔ Add image support @done(21-08-01 01:49)
+		✔ Add width adjusting support @done(21-08-01 01:49)
+	CSS Theming:
+		✔ Create a component to configre css variables @done(21-07-31 22:38)
+		☐ Calculate foreground color as black and white based on primary color
+		☐ Calculate panel background adding a:
+			☐ luminosity if foreground = white and 
+			☐ darkening if foreground = white
+	File operations:
+		☐ Add a new file operation clearing current bubbles
+		☐ Look at it: https://www.programmersought.com/article/67736782131/
+		☐ Add a save operation to save bubbles data into a json and letting user to download it
+		☐ Add a load operation to restore bubbles data into the app
+		☐ Add a image saving operation to save the app screen into an image
+	Design:
+		☐ Add title
+		☐ Add favicon
+		☐ Rewrite readme
+		☐ Centralize toolbar in portrait mode
+	Tests:
+		☐ Create automated tests for bubble manipulation
+		☐ Create automated tests for comment writing
+		☐ Create automated tests for theming
+		☐ Create automated tests for file operations
+	Instructions:
+		☐ Add a instructions page containing a tutorial of how to use the app

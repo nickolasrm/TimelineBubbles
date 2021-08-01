@@ -1,0 +1,48 @@
+.ButtonContainerStyle
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+	height: auto;
+
+	bottom: 0;
+	left: 0; 
+	transform: translate(-50%, 0);
+
+	background-color: inherit;
+	border-radius: 1rem;
+	
+	z-index: -1;
+
+	text-orientation: mixed;
+	writing-mode: vertical-lr;
+}
+
+.ButtonContainerStyle *
+{
+	background-color: transparent !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	font-size: 0.9rem;
+}
+
+.ButtonContainerStyle > div, .TextButtonStyle
+{
+	padding: 2vmin !important;
+	padding-right: 10vmin !important;
+	box-shadow: none !important;
+}
+
+.TextButtonStyle
+{
+	color: var(--bubbles-foreground);
+
+	border: 0;
+
+	text-orientation: mixed;
+	writing-mode: vertical-lr;
+
+	cursor: pointer;
+}

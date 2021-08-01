@@ -8,6 +8,10 @@ import IconContainer from '../../atoms/icon_button_container'
  * rounded toolbar
  * @param {Object} props 
  * @param {String} props.className 
+ * @param {Object} props.theme - Contains variables relative to the theme. e.g. colors
+ * @param {Function(Object)} props.setTheme - Sets the theme state object
+ * @param {Array} props.bubbles - Contains data relative to bubbles
+ * @param {Function(Array)} props.setBubbles - Sets the bubbles array
  * @returns {Toolbar}
  */
 export default function Toolbar(props)
