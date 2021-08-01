@@ -7,7 +7,7 @@
 
 	background-color: var(--bubble-background);
 
-	transition: 0.2s all;
+	transition: 0.2s transform;
 	z-index: 1;
 }
 

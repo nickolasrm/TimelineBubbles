@@ -16,7 +16,9 @@ export default function Comment(props)
 		<div className={CommentStyle + " " + 
 				(props.isEven ? EvenCommentStyle : OddCommentStyle)}>
 			{image === '' ? 
-					<div className={TextareaStyle} contentEditable={true}></div> :
+					<div className={TextareaStyle} 
+						contentEditable={true}
+						spellCheck={false}></div> :
 					<img src={image} className={ImageStyle}></img>
 				}
 			<CommentImageButton onImageSelected={setImage} image={image}

@@ -5,12 +5,15 @@ TODO:
 		✔ Fix font size @done(21-07-31 22:38)
 		✔ Add image support @done(21-08-01 01:49)
 		✔ Add width adjusting support @done(21-08-01 01:49)
+	Toolbar:
+		✔ Add primary color option @done(21-08-01 03:43)
+		✔ Add accent color option @done(21-08-01 03:43)
 	CSS Theming:
 		✔ Create a component to configre css variables @done(21-07-31 22:38)
-		☐ Calculate foreground color as black and white based on primary color
-		☐ Calculate panel background adding a:
-			☐ luminosity if foreground = white and 
-			☐ darkening if foreground = white
+		✔ Calculate foreground color as black and white based on primary color @done(21-08-01 04:45)
+		✔ Calculate panel background adding a: @done(21-08-01 04:45)
+			✔ luminosity if foreground = white and @done(21-08-01 04:45)
+			✔ darkening if foreground = white @done(21-08-01 04:45)
 	File operations:
 		☐ Add a new file operation clearing current bubbles
 		☐ Look at it: https://www.programmersought.com/article/67736782131/

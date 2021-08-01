@@ -16,7 +16,7 @@ export default function IconContainer(props) {
 			return (<div className={"p-" + (props.padding || 2) + " " +
 							IconButtonContainerStyle}>
 				{cloneElement(child, {
-						color: props.color || child.color || "white",
+						color: child.color || props.color || "white",
 						className: (child.className || "") + " " + (props.childClasses || "")
 					}
 				)}

@@ -14,7 +14,7 @@ export default function TemplateEditor()
 	/**
 	 * Data for configuring app the user defined theme
 	 */
-	const [theme, setTheme] = useState({primary: '#000', accent: '#eee'})
+	const [theme, setTheme] = useState({primary: '#ffffff', accent: '#212529'})
 
 	/**
 	 * Stores bubbles data
