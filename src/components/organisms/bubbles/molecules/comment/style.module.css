@@ -18,6 +18,8 @@
 	justify-content: center;
 
 	transition: 0.2s transform;
+
+	animation: created 0.6s;
 }
 .CommentStyle:hover
 {
@@ -79,4 +81,16 @@
 	height: 80%;
 	margin: 2vmin;
 	border-radius: 4vmin;
+}
+
+@keyframes created {
+	0% {
+		transform: scale(0);
+	}
+	66% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
 }

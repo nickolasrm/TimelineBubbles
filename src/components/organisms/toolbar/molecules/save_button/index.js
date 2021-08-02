@@ -9,6 +9,6 @@ import ButtonContainer from "../../atoms/button_container"
 export default function SaveButton(props)
 {
 	return <ButtonContainer onClick={props.onClick}>
-		<Save size="1.3rem"></Save>
+		<Save size="1.5rem"></Save>
 	</ButtonContainer>
 }

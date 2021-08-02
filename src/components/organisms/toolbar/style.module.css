@@ -5,13 +5,29 @@
 
 	opacity: 0.7;
 	transition: 0.2s all;
+	
+	max-width: 90vw;
 
 	right: 3vw;
 	bottom: 5vh;
 	position: absolute;
 }
+
 .ToolbarStyle:hover
 {
 	opacity: 1;
 	transform: scale(1.1);
+}
+
+@media (orientation: portrait)
+{
+	.ToolbarStyle{
+		left: 50%;
+		transform: translate(-50%);
+		right: auto;
+	}
+	.ToolbarStyle:hover
+	{
+		transform: translate(-50%) scale(1.1);
+	}
 }

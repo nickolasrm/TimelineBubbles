@@ -100,5 +100,7 @@ export default function CSSConfigurator(props) {
 				--bubble-foreground: ${blackOrWhite(primary)};
 			}
 			.print{${isPrinting ? "display: none !important;" : ""}}
+			.disable-anim{${isPrinting ? "animation: none !important;" : ""}}
+			.disable-trans{${isPrinting ? "transition: none !important;" : ""}}
 		`}</style>)
 }

@@ -9,6 +9,6 @@ import ButtonContainer from "../../atoms/button_container"
 export default function PrintButton(props)
 {	
 	return <ButtonContainer onClick={props.onClick}>
-		<FileImage size="1.4rem"></FileImage>
+		<FileImage size="1.6rem"></FileImage>
 	</ButtonContainer>
 }

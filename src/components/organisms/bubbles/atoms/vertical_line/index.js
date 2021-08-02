@@ -9,7 +9,7 @@ import { VerticalLineStyle, EvenLineStyle, OddLineStyle } from './style.module.c
 export default function VerticalLine(props)
 {
 	return (
-		<div className={VerticalLineStyle + " " +
+		<div className={VerticalLineStyle + " disable-anim " +
 			(props.isEven ? EvenLineStyle : OddLineStyle)}>
 		</div>
 	)

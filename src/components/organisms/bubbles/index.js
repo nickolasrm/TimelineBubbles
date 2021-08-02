@@ -28,7 +28,7 @@ export default function Bubbles(props)
 					identifier: new Date().getTime(), 
 					title: `${(new Date()).getFullYear()}`,
 					isImage: false, 
-					comment: 'When you tried a new tool\nBy nickolasrm'
+					comment: '&nbsp;When you tried a new tool!&nbsp;<br>by nickolasrm'
 				}])
 	}, [bubbles, setBubbles])
 
@@ -59,9 +59,9 @@ export default function Bubbles(props)
 				newBubbles.push(el)
 				newBubbles.push({
 					identifier: nextId(),
-					title: '',
+					title: "",
 					isImage: false,
-					comment: ''
+					comment: ""
 				})
 			}
 		})
@@ -87,7 +87,7 @@ export default function Bubbles(props)
 	return (
 		<>
 		<div className={`d-flex w-100 h-100 align-items-center 
-			justify-content-center flex-row ` + ContainerStyle}>
+			justify-content-center flex-row disable-trans ` + ContainerStyle}>
 			{bubbles.map((b, i) => 
 				<CommentedBubble key={b.identifier}
 					data={b}

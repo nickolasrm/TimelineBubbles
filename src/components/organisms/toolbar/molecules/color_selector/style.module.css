@@ -14,12 +14,12 @@
 .ColorSelectorStyle::-webkit-color-swatch
 {
 	border-radius: 50%;
-
-	width: 100%;
-	height: 100%;
-
 	border: none;
-	padding: 0;
+}
+.ColorSelectorStyle::-moz-color-swatch
+{
+	border-radius: 50%;
+	border: none;
 }
 
 .ColorSelectorStyle:hover

@@ -17,7 +17,7 @@ import { useEffect, useState, useRef } from 'react'
  * @returns 
  */
 export default function Comment(props) {
-	const [image, setImage] = useState('')
+	const [image, setImage] = useState(null)
 
 	/**
 	 * Used to define the value of the textarea or image whenever the user opens a file
@@ -34,14 +34,20 @@ export default function Comment(props) {
 		handleChange()
 	}, [comment, isImage])
 
+	useEffect(() => {
+		if (textareaRef && comment)
+			textareaRef.current.innerHTML = comment
+	}, [])
+
 	/** Updates the bubble comment if an image is added */
 	const { identifier, updateBubble } = props
 	useEffect(() => {
 		const handleImageChange = () => {
-			updateBubble(identifier, { 
-				isImage: image !== '', 
-				comment: image 
-			})
+			if (image != null)
+				updateBubble(identifier, { 
+					isImage: image !== '', 
+					comment: image 
+				})
 		}
 		handleImageChange()
 	}, [image])
@@ -55,7 +61,7 @@ export default function Comment(props) {
 	}
 
 	return (
-		<div className={CommentStyle + " " +
+		<div className={CommentStyle + " disable-anim " +
 			(props.isEven ? EvenCommentStyle : OddCommentStyle)}>
 			{!image ?
 				<div ref={textareaRef}

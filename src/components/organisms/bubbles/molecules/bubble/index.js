@@ -54,8 +54,11 @@ export default function Bubble(props) {
 	 */
 	function handleChange(ev)
 	{
-		props.updateBubble(props.identifier, 
-			{title: ev.target.innerHTML})
+		if (ev.target.innerHTML !== "<div><br></div><div><br></div>")
+			props.updateBubble(props.identifier, 
+				{title: ev.target.innerHTML})
+		else
+			ev.target.innerHTML = ""
 	}
 
 	// Focus when a new bubble is created
@@ -66,10 +69,9 @@ export default function Bubble(props) {
 	return (
 		<div ref={inputRef} 
 			className={`rounded-circle d-flex align-items-center 
-						justify-content-center ` + ContainerStyle}
+						justify-content-center disable-anim ` + ContainerStyle}
 			contentEditable={true}
 			onInput={handleChange}
 			onKeyDown={handleKeyDown}
-			spellCheck={false}>
-		</div>)
+			spellCheck={false}></div>)
 }

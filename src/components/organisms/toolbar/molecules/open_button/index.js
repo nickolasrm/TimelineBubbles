@@ -44,6 +44,6 @@ export default function OpenButton(props)
 			type="file" 
 			accept=".json"
 			onChange={handleFileOpened}></input>
-		<Folder2 size="1.6rem"></Folder2>
+		<Folder2 size="1.8rem"></Folder2>
 	</ButtonContainer>
 }

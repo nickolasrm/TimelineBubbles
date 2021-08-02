@@ -26,7 +26,7 @@ export default function CommentImageButton(props)
 	return (
 		<div className={ButtonContainerStyle + " print " + (props.className || "")}>
 			{
-				props.image === '' ? 
+				!props.image ? 
 					<Base64ImageInputButton onImageSelected={handleImageSelected}
 						className={TextButtonStyle}>Image</Base64ImageInputButton> :
 					<span onClick={clearImageHandler} 
