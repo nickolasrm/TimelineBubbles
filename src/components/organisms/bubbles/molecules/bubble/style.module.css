@@ -1,0 +1,27 @@
+.ContainerStyle
+{
+	width: 15vmin;
+	height: 15vmin;
+
+	font-size: 3vmin;
+
+	background-color: var(--bubble-background);
+
+	transition: 0.2s transform;
+	z-index: 100000;
+
+	outline: none;
+	font-weight: 500;
+	font-size: 0.9rem;
+
+	text-align: center;
+
+	color: var(--bubble-foreground);
+
+	position: relative;
+}
+
+.ContainerStyle:hover
+{
+	transform: scale(1.1);
+}

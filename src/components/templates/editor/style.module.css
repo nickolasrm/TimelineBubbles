@@ -3,11 +3,5 @@
 	width: 100vw;
 	height: 100vh;
 
-	background: linear-gradient(
-		to bottom,
-		var(--background), var(--background) calc(50vh - 0.5vmin),
-		var(--bubble-background) calc(50vh - 0.5vmin), 
-		var(--bubble-background) calc(50vh + 0.5vmin),
-		var(--background) calc(50vh + 0.5vmin), var(--background)
-	);
+	background: var(--background);
 }

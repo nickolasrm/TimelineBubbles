@@ -1,0 +1,15 @@
+.HorizontalLineStyle
+{
+	width: 100vw;
+	height: 1vmin;
+
+	position: absolute;
+	top: calc(50vh - 0.5vmin);
+	left: 0;
+	right: 0;
+	margin: 0 !important;
+
+	background: var(--bubble-background);
+
+	z-index: 0;
+}

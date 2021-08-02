@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Title from '../../molecules/title'
-import Toolbar from '../../molecules/toolbar'
+import Title from '../../organisms/title'
+import Toolbar from '../../organisms/toolbar'
 import { ContainerStyle } from './style.module.css'
 import Bubbles from '../../organisms/bubbles'
-import CSSConfigurator from '../../atoms/css_configurator'
+import CSSConfigurator from '../../organisms/css_configurator'
 
 /**
  * Template app editor
@@ -14,14 +14,17 @@ export default function TemplateEditor()
 	/**
 	 * Data for configuring app the user defined theme
 	 */
-	const [theme, setTheme] = useState({primary: '#ffffff', accent: '#212529'})
+	const [theme, setTheme] = useState({
+		primary: '#ffffff', 
+		accent: '#212529',
+		isPrinting: false})
 
 	/**
 	 * Stores bubbles data
 	 */
 	const [bubbles, setBubbles] = useState([])
 
-	return (<main className={ContainerStyle}>
+	return (<main id="toPrint" className={ContainerStyle}>
 				<CSSConfigurator theme={theme}></CSSConfigurator>
 				<Title className="pt-4"></Title>
 				<Bubbles bubbles={bubbles} setBubbles={setBubbles}></Bubbles>

@@ -1,0 +1,23 @@
+.ContainerStyle
+{
+	padding: 1vmin 2vmin 1vmin 2vmin;
+	opacity: 0.4;
+
+	cursor: pointer;
+
+	transition: 0.2s opacity;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ContainerStyle:hover
+{
+	opacity: 1;
+}
+
+.ContainerStyle svg
+{
+	fill: var(--panel-foreground);
+}

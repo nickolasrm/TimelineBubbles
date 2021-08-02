@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { ContainerStyle } from './style.module.css'
-import nextId from 'react-id-generator'
-import CommentedBubble from '../../molecules/commented_bubble/index'
+import CommentedBubble from './molecules/commented_bubble'
+import HorizontalLine from './atoms/horizontal_line'
 
 /**
  * Stores all bubbles inside of it and aligns them
@@ -15,53 +15,89 @@ export default function Bubbles(props)
 {
 	const { bubbles, setBubbles } = props
 
+	/**
+	 * Generates an unique id for a bubble
+	 * @returns Int
+	 */
+	function nextId() { return new Date().getTime() }
+
 	/** Detects if the array is empty or if it was cleared */
 	useEffect(() => {
 		if (bubbles.length === 0)
-			setBubbles([nextId()])
+			setBubbles([{
+					identifier: new Date().getTime(), 
+					title: `${(new Date()).getFullYear()}`,
+					isImage: false, 
+					comment: 'When you tried a new tool\nBy nickolasrm'
+				}])
 	}, [bubbles, setBubbles])
 
 	/**
 	 * Removes a bubble from the bubbles list
-	 * @param {Int} key - A bubble index
+	 * @param {Int} identifier - A bubble index
 	 */
-	function removeBubble(key)
+	function removeBubble(identifier)
 	{
 		if(bubbles.length > 1)
-			setBubbles(props.bubbles.filter(el => {
-				return key !== el
+			setBubbles(bubbles.filter(el => {
+				return identifier !== el.identifier
 			}))
 	}
 
 	/**
  	 * Adds a bubble into the bubbles list
-	 * @param {Int} key - A bubble key
+	 * @param {Int} identifier - A bubble key
 	 */
-	function addBubble(key)
+	function addBubble(identifier)
 	{
 		const newBubbles = []
 		bubbles.forEach(el => {
-			if (el !== key)
+			if (el.identifier !== identifier)
 				newBubbles.push(el)
 			else
 			{
 				newBubbles.push(el)
-				newBubbles.push(nextId())
+				newBubbles.push({
+					identifier: nextId(),
+					title: '',
+					isImage: false,
+					comment: ''
+				})
 			}
 		})
 		setBubbles(newBubbles)
 	}
 
+	/**
+	 * Updates the bubbles array when a bubble data is changed
+	 * @param {String} identifier 
+	 * @param {Object} content 
+	 * @param {Boolean} content.isImage
+	 * @param {String} content.data
+	 */
+	function updateBubble(identifier, content)
+	{
+		setBubbles(bubbles.map(el => {
+			if (el.identifier === identifier)
+				el = {...el, ...content}
+			return el
+		}))
+	}
+
 	return (
+		<>
 		<div className={`d-flex w-100 h-100 align-items-center 
 			justify-content-center flex-row ` + ContainerStyle}>
-			{bubbles.map((key, i) => 
-				<CommentedBubble key={key}
-					identifier={key}
+			{bubbles.map((b, i) => 
+				<CommentedBubble key={b.identifier}
+					data={b}
 					addBubble={addBubble}
 					removeBubble={removeBubble}
+					updateBubble={updateBubble}
 					isEven={i % 2 === 0}></CommentedBubble>
 			)}
+			<HorizontalLine></HorizontalLine>
 		</div>
+		</>
 	)
 }
