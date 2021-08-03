@@ -30,7 +30,7 @@ If you're going to make a presentation or just want to create a historical repre
 for sure, use it!
 
 ## Usage
-Go to the [app page]()
+Go to the [app page](https://nickolasrm.github.io/TimelineBubbles/#/)
 
 For installing locally (only if you are going to edit the code): 
 1. Clone the repository
