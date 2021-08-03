@@ -1,11 +1,11 @@
 import './App.css'
 import Editor from './components/pages/editor'
 import Tutorial from './components/pages/tutorial'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Switch>
                 <Route path="/" exact>
                     <Editor></Editor>
@@ -14,7 +14,7 @@ function App() {
                     <Tutorial></Tutorial>
                 </Route>
             </Switch>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 

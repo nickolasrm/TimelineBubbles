@@ -168,7 +168,7 @@ export default function Tutorial() {
 		<Paragraph>
 			<h3>Credits</h3>
 			<p>If this app helped you in some way, don't forget to&nbsp;
-				<a target="_blank" href="https://github.com/nickolasrm/TimelineBubbles">give it a star!</a>
+				<a rel="noreferrer" target="_blank" href="https://github.com/nickolasrm/TimelineBubbles">give it a star!</a>
 			</p>
 			<p>❤️ Made with love by nickolasrm</p>
 		</Paragraph>

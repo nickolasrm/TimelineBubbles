@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ContainerStyle, InputStyle } from './style.module.css'
+import { ContainerStyle } from './style.module.css'
 import { KEY_BACK_SPACE, KEY_RETURN, KEY_SHIFT } from 'keycode-js'
 
 /**

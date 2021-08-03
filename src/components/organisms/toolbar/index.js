@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { ToolbarStyle, ToolbarContainerStyle } from './style.module.css'
+import { ToolbarStyle } from './style.module.css'
 import FileSaver from 'file-saver'
 import ColorSelector from './molecules/color_selector'
 import NewButton from './molecules/new_button'
@@ -68,11 +68,10 @@ export default function Toolbar(props) {
 	 * Prints the app page when an user clicks the print button
 	 * @param {Object} ev 
 	 */
-	function handlePrintClick(ev) { setTheme({...theme, isPrinting: true}) }
+	function handlePrintClick(ev) { setTheme({ ...theme, isPrinting: true }) }
 	useEffect(() => {
-		if (isPrinting)
-		{
-			html2canvas(document.querySelector('#toPrint') , {
+		if (isPrinting) {
+			html2canvas(document.querySelector('#toPrint'), {
 				scrollX: -window.scrollX,
 				scrollY: -window.scrollY,
 				windowWidth: document.documentElement.offsetWidth,
@@ -82,9 +81,9 @@ export default function Toolbar(props) {
 					FileSaver.saveAs(blob, "timeline.png")
 				})
 			})
-			setTheme({...theme, isPrinting: false})
+			setTheme({ ...theme, isPrinting: false })
 		}
-	}, [isPrinting])
+	}, [isPrinting]) // eslint-disable-line react-hooks/exhaustive-deps
 
 	return (
 		<div className={"print"}>

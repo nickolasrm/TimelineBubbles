@@ -34,23 +34,21 @@ export default function Comment(props) {
 		handleChange()
 	}, [comment, isImage])
 
+	/** Initializes the textarea with the initial value of comment */
 	useEffect(() => {
 		if (textareaRef && comment)
 			textareaRef.current.innerHTML = comment
-	}, [])
+	}, []) // eslint-disable-line react-hooks/exhaustive-deps
 
 	/** Updates the bubble comment if an image is added */
 	const { identifier, updateBubble } = props
 	useEffect(() => {
-		const handleImageChange = () => {
-			if (image !== null)
-				updateBubble(identifier, { 
-					isImage: image !== '', 
-					comment: image 
-				})
-		}
-		handleImageChange()
-	}, [image])
+		if (image !== null)
+			updateBubble(identifier, { 
+				isImage: image !== '', 
+				comment: image 
+			})
+	}, [image]) // eslint-disable-line react-hooks/exhaustive-deps
 
 	/**
 	 * Updates bubbles when the textarea is changed

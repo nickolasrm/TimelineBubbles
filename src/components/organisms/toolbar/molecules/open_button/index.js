@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { FileImage, Folder2 } from "react-bootstrap-icons"
+import { Folder2 } from "react-bootstrap-icons"
 import ButtonContainer from "../../atoms/button_container"
 import { InputStyle } from './style.module.css'
 

@@ -20,10 +20,9 @@ export default function ColorSelector(props)
 	return <ButtonContainer>
 		<input type="color" 
 			data-testid={props.testid}
-			className={props.className || ""}
+			className={ColorSelectorStyle + " " + props.className || ""}
 			onChange={handleChange}
 			value={props.color || "#000000"}
-			className={ColorSelectorStyle}
 		></input>
 	</ButtonContainer>
 }
