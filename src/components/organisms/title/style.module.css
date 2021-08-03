@@ -6,14 +6,17 @@
 	left: 50%;
 	transform: translate(-50%);
 
-	opacity: 0.1;
 	
 	position: absolute;
 	user-select: none;
 
 	display: flex;
 	align-items: flex-end;
+}
 
+.AnimatedStyle
+{
+	opacity: 0.1;
 	animation: TitleAnim 3s;
 }
 

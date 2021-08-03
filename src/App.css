@@ -2,3 +2,13 @@
 {
   font-size: calc(3.0vmin);
 }
+
+html
+{
+  scroll-behavior: smooth;
+}
+
+body, main, html
+{
+  overflow-x: hidden;
+}

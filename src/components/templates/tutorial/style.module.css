@@ -1,0 +1,20 @@
+.ContainerStyle
+{
+	width: 100vw;
+	max-width: 100vw;
+	min-height: 100vh;
+
+	background: var(--background);
+}
+
+.ArticleStyle
+{
+	color: var(--panel-foreground);
+
+	padding: calc(9vh + 7rem) 25vw 5rem 25vw;
+}
+
+.ArticleStyle a
+{
+	color: var(--panel-foreground);
+}

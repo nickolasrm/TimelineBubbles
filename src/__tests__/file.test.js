@@ -43,6 +43,26 @@ describe("File operations", () => {
 		expect(tid('bubble')[1].innerHTML).toBe('3002')
 	})
 
+	it("Corrupted file opening", async () => {
+		const alert = window.alert
+
+		const el = tid('open-input')[0]
+		const file = new File([`{
+			"bubbles":[
+				{"identifier":1,"title":"3001","isImage":false,"comment":"ok"},
+				{"identifier":2,"title":"3002","isImage":false,"comment":"ok"}
+			]}`], 'bubbles.json', {type: 'text/plain'})
+
+		let triggered = false
+		await act(async () => {
+			window.alert = (arg) => {triggered = true}
+			await fireEvent.change(el, {target: {files: [file]}})
+			return new Promise(resolve => setTimeout(resolve, 100))
+		})
+		window.alert = alert
+		expect(triggered).toBe(true)
+	})
+
 	afterAll(() => {
 		finishApp(main)
 	})
