@@ -4,7 +4,7 @@ _Describing historical data? Why not to use a timeline?_
 
 ## GIF
 
-
+![App](https://github.com/nickolasrm/TimelineBubbles/blob/main/screenshots/main.gif)
 
 ## Greetings
 Hi ✋! My name is Nickolas, known as nickolasrm, the creator of this app.
@@ -38,7 +38,11 @@ For installing locally (only if you are going to edit the code):
 ## Theming
 Of course you can theme your timeline. Here below are some examples:
 
+![Theme example 1](https://github.com/nickolasrm/TimelineBubbles/blob/main/screenshots/theme1.png)
 
+![Theme example 2](https://github.com/nickolasrm/TimelineBubbles/blob/main/screenshots/theme2.png)
+
+![Theme example 3](https://github.com/nickolasrm/TimelineBubbles/blob/main/screenshots/theme3.png)
 
 ## Credits
 If this app helped you in some way, don't forget to give it a star!
