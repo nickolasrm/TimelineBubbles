@@ -43,7 +43,7 @@ export default function Comment(props) {
 	const { identifier, updateBubble } = props
 	useEffect(() => {
 		const handleImageChange = () => {
-			if (image != null)
+			if (image !== null)
 				updateBubble(identifier, { 
 					isImage: image !== '', 
 					comment: image 
@@ -62,14 +62,18 @@ export default function Comment(props) {
 
 	return (
 		<div className={CommentStyle + " disable-anim " +
-			(props.isEven ? EvenCommentStyle : OddCommentStyle)}>
+			(props.isEven ? EvenCommentStyle : OddCommentStyle)}
+			data-testid="comment">
 			{!image ?
 				<div ref={textareaRef}
 					className={TextareaStyle}
+					data-testid="comment_textarea"
 					onInput={handleTextChange}
 					contentEditable={true}
-					spellCheck={false}></div> :
+					spellCheck={false}
+					role="textbox"></div> :
 				<img src={image} className={ImageStyle}
+					data-testid="comment_image"
 					alt="Bubble"></img>
 			}
 			<CommentImageButton onImageSelected={setImage} image={image}

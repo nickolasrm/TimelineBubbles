@@ -8,7 +8,9 @@ import ButtonContainer from "../../atoms/button_container"
  */
 export default function NewButton(props)
 {
-	return <ButtonContainer onClick={props.onClick}>
+	return <ButtonContainer 
+			onClick={props.onClick}
+			testid="new-button">
 		<Plus size="2.2rem"></Plus>
 	</ButtonContainer>
 }

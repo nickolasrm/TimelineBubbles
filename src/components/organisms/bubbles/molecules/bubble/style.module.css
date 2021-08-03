@@ -3,6 +3,8 @@
 	width: 15vmin;
 	height: 15vmin;
 
+	border-radius: 50%;
+
 	font-size: 3vmin;
 
 	background-color: var(--bubble-background);
@@ -19,6 +21,10 @@
 	color: var(--bubble-foreground);
 
 	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	animation: created 0.2s;
 }

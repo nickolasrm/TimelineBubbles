@@ -7,6 +7,7 @@ import { ColorSelectorStyle } from './style.module.css'
  * @param {String} props.color
  * @param {Function(colorHex: String)} props.onColorChange - 
  * Triggered whenever the user changes the color
+ * @param {String} props.className
  */
 export default function ColorSelector(props)
 {
@@ -17,7 +18,9 @@ export default function ColorSelector(props)
 	function handleChange(ev){ props.onColorChange(ev.target.value) }
 
 	return <ButtonContainer>
-		<input type="color"
+		<input type="color" 
+			data-testid={props.testid}
+			className={props.className || ""}
 			onChange={handleChange}
 			value={props.color || "#000000"}
 			className={ColorSelectorStyle}

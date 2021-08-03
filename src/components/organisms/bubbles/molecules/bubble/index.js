@@ -68,8 +68,8 @@ export default function Bubble(props) {
 
 	return (
 		<div ref={inputRef} 
-			className={`rounded-circle d-flex align-items-center 
-						justify-content-center disable-anim ` + ContainerStyle}
+			className={'disable-anim ' + ContainerStyle}
+			data-testid="bubble"
 			contentEditable={true}
 			onInput={handleChange}
 			onKeyDown={handleKeyDown}

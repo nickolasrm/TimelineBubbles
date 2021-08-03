@@ -87,14 +87,13 @@ export default function Toolbar(props) {
 	}, [isPrinting])
 
 	return (
-		<div className={ToolbarContainerStyle + " print"}>
+		<div className={"print"}>
 			<div className={ToolbarStyle +
-				" rounded-pill py-2 ps-2 pe-4 d-flex align-items-center justify-content-center " +
 				(props.className || "")}>
 				<ColorSelector onColorChange={setPrimaryColor}
-					color={primary}></ColorSelector>
+					color={primary} testid="primary-selector"></ColorSelector>
 				<ColorSelector onColorChange={setAccentColor}
-					color={accent}></ColorSelector>
+					color={accent} testid="accent-selector"></ColorSelector>
 				<NewButton onClick={handleNewFileClick}></NewButton>
 				<OpenButton onFileOpened={handleFileOpened}></OpenButton>
 				<SaveButton onClick={handleSaveFileClick}></SaveButton>

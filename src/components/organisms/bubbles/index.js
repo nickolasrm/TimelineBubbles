@@ -85,9 +85,8 @@ export default function Bubbles(props)
 	}
 
 	return (
-		<>
-		<div className={`d-flex w-100 h-100 align-items-center 
-			justify-content-center flex-row disable-trans ` + ContainerStyle}>
+		<div className={'disable-trans ' + ContainerStyle}
+			data-testid="bubbles-container">
 			{bubbles.map((b, i) => 
 				<CommentedBubble key={b.identifier}
 					data={b}
@@ -98,6 +97,5 @@ export default function Bubbles(props)
 			)}
 			<HorizontalLine></HorizontalLine>
 		</div>
-		</>
 	)
 }

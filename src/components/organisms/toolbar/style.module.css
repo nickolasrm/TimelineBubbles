@@ -11,6 +11,15 @@
 	right: 3vw;
 	bottom: 5vh;
 	position: absolute;
+
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 50rem;
+	padding: .5rem;
+	padding-right: 1rem;
 }
 
 .ToolbarStyle:hover

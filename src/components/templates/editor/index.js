@@ -26,7 +26,7 @@ export default function TemplateEditor()
 
 	return (<main id="toPrint" className={ContainerStyle}>
 				<CSSConfigurator theme={theme}></CSSConfigurator>
-				<Title className="pt-4"></Title>
+				<Title></Title>
 				<Bubbles bubbles={bubbles} setBubbles={setBubbles}></Bubbles>
 				<Toolbar bubbles={bubbles} setBubbles={setBubbles}
 					theme={theme} setTheme={setTheme}></Toolbar>

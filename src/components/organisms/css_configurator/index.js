@@ -81,14 +81,18 @@ export default function CSSConfigurator(props) {
 	function panelColor(color)
 	{
 		const {r, g, b} = hexToRgb(color)
+		const factor = 25
+		const min = (v) => Math.max(v - factor, 0)
+		const max = (v) => Math.min(v + factor, 255)
+
 		if (blackOrWhiteRGB(r, g, b) === '#000000')
-			return rgbToHex(r - 25, g - 25, b - 25)
+			return rgbToHex(min(r), min(g), min(b))
 		else 
-			return rgbToHex(r + 25, g + 25, b + 25)
+			return rgbToHex(max(r), max(g), max(b))
 	}
 
 	return (
-		<style>{`
+		<style data-testid="theme-style">{`
 			:root
 			{
 				--background: ${accent};

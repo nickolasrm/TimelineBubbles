@@ -1,4 +1,4 @@
-import Base64ImageInputButton from '../../atoms/image_button'
+import ImageButton from '../../atoms/image_button'
 import { ButtonContainerStyle, TextButtonStyle } from './style.module.css'
 
 /**
@@ -27,10 +27,12 @@ export default function CommentImageButton(props)
 		<div className={ButtonContainerStyle + " print " + (props.className || "")}>
 			{
 				!props.image ? 
-					<Base64ImageInputButton onImageSelected={handleImageSelected}
-						className={TextButtonStyle}>Image</Base64ImageInputButton> :
+					<ImageButton onImageSelected={handleImageSelected}
+						className={TextButtonStyle}>
+							Image</ImageButton> :
 					<span onClick={clearImageHandler} 
 						className={TextButtonStyle}
+						data-testid="to_text_comment_button"
 						role="button">Text</span>
 			}
 		</div>

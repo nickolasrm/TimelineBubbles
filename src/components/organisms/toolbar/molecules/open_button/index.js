@@ -42,6 +42,7 @@ export default function OpenButton(props)
 		<input className={InputStyle}
 			ref={file_input} 
 			type="file" 
+			data-testid="open-input"
 			accept=".json"
 			onChange={handleFileOpened}></input>
 		<Folder2 size="1.8rem"></Folder2>

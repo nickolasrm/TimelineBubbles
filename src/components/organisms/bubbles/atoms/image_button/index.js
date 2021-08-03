@@ -32,6 +32,10 @@ export default function ImageButton(props) {
 		})
 	}
 
+	/**
+	 * Calls onImageSelected passing the base64 encoded file content
+	 * @param {Object} event 
+	 */
 	async function handleOnChange(event) {
 		const file = event.target?.files[0]
 		if (file)
@@ -46,6 +50,7 @@ export default function ImageButton(props) {
 			<input className={FileInputStyle} 
 				type="file" 
 				accept="image/*"
+				data-testid="to_image_comment_input"
 				onChange={handleOnChange} />
 			{props.children}
 		</label>

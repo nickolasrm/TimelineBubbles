@@ -3,27 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "bootstrap": "^5.0.2",
     "file-saver": "^2.0.5",
     "html2canvas": "^1.1.4",
     "keycode-js": "^3.1.0",
     "react": "^17.0.2",
-    "react-bootstrap": "^1.6.1",
     "react-bootstrap-icons": "^1.5.0",
     "react-dom": "^17.0.2",
-    "react-id-generator": "^3.0.1",
     "react-scripts": "4.0.3",
-    "react-simple-dropzone": "^1.0.20",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "coverage": "react-scripts test --coverage",
+    "ci": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.test.js?(x)"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/react": "^12.0.0"
   }
 }

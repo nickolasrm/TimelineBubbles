@@ -8,7 +8,10 @@ import { ContainerStyle } from './style.module.css'
  */
 export default function ButtonContainer(props)
 {
-	return <div className={ContainerStyle} onClick={props.onClick}>
+	return <div 
+		className={ContainerStyle} 
+		onClick={props.onClick}
+		data-testid={props.testid}>
 		{props.children}
 	</div>
 }
