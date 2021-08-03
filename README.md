@@ -1,5 +1,8 @@
 # TimelineBubbles
 
+![Build](https://github.com/nickolasrm/TimelineBubbles/actions/workflows/build.yml/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/nickolasrm/TimelineBubbles/badge.svg?branch=main)](https://coveralls.io/github/nickolasrm/TimelineBubbles?branch=main)
+
 _Describing historical data? Why not to use a timeline?_
 
 ## GIF
