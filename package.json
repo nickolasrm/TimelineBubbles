@@ -1,6 +1,6 @@
 {
   "name": "timeline-builder",
-  "homepage": ".",
+  "homepage": "https://nickolasrm.github.io/TimelineBubbles",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -19,6 +19,8 @@
     "test": "react-scripts test",
     "coverage": "react-scripts test --coverage",
     "ci": "react-scripts test --coverage --watchAll=false",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "jest": {
@@ -45,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react": "^12.0.0"
+    "@testing-library/react": "^12.0.0",
+    "gh-pages": "^3.2.3"
   }
 }
