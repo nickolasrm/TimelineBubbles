@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/TimelineBubbles/static/css/main.fdd7ed8c.chunk.css",
+    "main.js": "/TimelineBubbles/static/js/main.9ead4e57.chunk.js",
+    "main.js.map": "/TimelineBubbles/static/js/main.9ead4e57.chunk.js.map",
+    "runtime-main.js": "/TimelineBubbles/static/js/runtime-main.3d34da99.js",
+    "runtime-main.js.map": "/TimelineBubbles/static/js/runtime-main.3d34da99.js.map",
+    "static/js/2.b261b597.chunk.js": "/TimelineBubbles/static/js/2.b261b597.chunk.js",
+    "static/js/2.b261b597.chunk.js.map": "/TimelineBubbles/static/js/2.b261b597.chunk.js.map",
+    "index.html": "/TimelineBubbles/index.html",
+    "static/css/main.fdd7ed8c.chunk.css.map": "/TimelineBubbles/static/css/main.fdd7ed8c.chunk.css.map",
+    "static/js/2.b261b597.chunk.js.LICENSE.txt": "/TimelineBubbles/static/js/2.b261b597.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3d34da99.js",
+    "static/js/2.b261b597.chunk.js",
+    "static/css/main.fdd7ed8c.chunk.css",
+    "static/js/main.9ead4e57.chunk.js"
+  ]
+}
